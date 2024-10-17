@@ -25,3 +25,14 @@ Aim: The aim of this analysis is to show the quarterly sales performance of Mave
     GROUP BY deal_stage
     ORDER BY Opportunity_count DESC;
 ```
+
+
+2. To see calculate the total sales focusing on the closed deal "won"
+``` sql
+SELECT
+  SUM(close_value) AS Total_sales
+  FROM sales_pipeline
+  WHERE deal_stage = "Won";
+```
+
+
